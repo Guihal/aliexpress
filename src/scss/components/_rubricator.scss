@@ -1,3 +1,111 @@
 .uc-rubricator {
-    .container {}
+    .t976__wrapper {
+        display: flex !important;
+        justify-content: start !important;
+        // width: fit-content !important;
+        flex-wrap: nowrap !important;
+        // min-width: max-content !important;
+        gap: 10px !important;
+        // width: 1500px !important;
+    }
+
+    .t976__list-item {
+        min-width: fit-content !important;
+        padding: 0 !important;
+    }
+
+    .t976 {
+        display: block;
+    }
+
+    .t-col {
+        position: relative;
+    }
+
+    .anim-block {
+        width: 50px;
+        height: 5px;
+        overflow: hidden;
+        position: relative;
+        background: #eef2f6d8;
+        transition: all 0.3s;
+        border-radius: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+
+        &-in {
+            border-radius: 40px;
+            height: 5px;
+            position: absolute;
+            transition: all 1s;
+            width: 18px;
+            top: 0;
+            left: -9px;
+            background: #FE2722;
+            animation: moveAnimBlock 2s ease infinite;
+        }
+
+        @keyframes moveAnimBlock {
+            0% {
+                left: -9px;
+            }
+
+            50% {
+                left: calc(100% - 9px);
+            }
+
+            100% {
+                left: -9px;
+            }
+        }
+    }
+
+    .t976 {
+        overflow-y: hidden !important;
+        overflow-x: scroll !important;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        &_blur {
+            position: absolute;
+            height: 100%;
+            width: 45px;
+            z-index: 501;
+            top: 0;
+            transition: all 0.3s;
+
+            &-left {
+                background: linear-gradient(270deg, #FBFBFB 0%, rgba(251, 251, 251, 0) 100%);
+                left: 0;
+                rotate: 180deg;
+                opacity: 0;
+
+                @media screen and (min-width: 960px) {
+                    left: 80px;
+                }
+
+                @media screen and (min-width: 1200px) {
+                    left: 100px;
+                }
+
+                @media screen and (max-width: 960px) {
+                    left: 20px;
+                }
+            }
+
+            &-right {
+                background: linear-gradient(270deg, #FBFBFB 0%, rgba(251, 251, 251, 0) 100%);
+                right: 0;
+
+                @media screen and (max-width: 960px) {
+                    right: 20px;
+                }
+            }
+        }
+    }
 }

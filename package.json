@@ -38,6 +38,7 @@
 	},
 	"dependencies": {
 		"postcss-preset-env": "^9.6.0",
-		"style-loader": "^4.0.0"
+		"style-loader": "^4.0.0",
+		"swiper": "^11.1.9"
 	}
 }

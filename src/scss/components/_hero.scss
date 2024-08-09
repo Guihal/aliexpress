@@ -1,0 +1,269 @@
+.hide-posts {
+    .js-feed {
+        height: 0 !important;
+        pointer-events: none;
+        overflow: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+}
+
+.hero {
+    height: 406px;
+
+    @media screen and (max-width: 940px) {
+        height: auto;
+    }
+
+    &__container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 940px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: content-box;
+        }
+
+        @media screen and (max-width: 940px) {
+            flex-direction: column;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 30px;
+        }
+    }
+
+    &__last-post {
+        cursor: pointer;
+        height: 100%;
+        width: calc(58.6% - 10px);
+        position: relative;
+        padding: 40px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        overflow: hidden;
+
+        &_img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+
+            &-container {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                z-index: 1;
+
+                @media screen and (max-width: 940px) {
+                    height: auto;
+                    position: relative;
+                    left: auto;
+                    right: auto;
+                    margin-bottom: 15px;
+                    border-radius: 12px;
+                    overflow: hidden;
+                }
+            }
+
+            @media screen and (max-width: 940px) {
+                max-height: 250px;
+                height: auto;
+            }
+
+            @media screen and (max-width: 468px) {
+                max-height: 125px;
+            }
+        }
+
+        &_title {
+            position: relative;
+            z-index: 2;
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 110%;
+            letter-spacing: -0.03em;
+            color: var(--18181b);
+            margin-bottom: 15px;
+
+            @media screen and (max-width: 940px) {
+                margin-bottom: 10px;
+                font-size: 26px;
+                line-height: 100%;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            width: calc(50% - 10px);
+        }
+
+        @media screen and (max-width: 940px) {
+            padding: 0px;
+            border-radius: none;
+            width: 100%;
+        }
+    }
+}
+
+.post {
+    &__info {
+        display: flex;
+        gap: 5px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &_time-reading {
+        display: flex;
+        align-items: center;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: var(--18181b);
+        gap: 2px;
+    }
+
+    &_date {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 135%;
+        letter-spacing: -0.03em;
+        color: var(--18181b);
+    }
+
+    &_tag {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 135%;
+        letter-spacing: -0.03em;
+        color: rgba(254, 39, 34, 0.8);
+        margin-bottom: 2px;
+    }
+
+    &_title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: var(--18181b);
+        margin-bottom: 5px;
+    }
+}
+
+.popular-post {
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0px 0px 10px 0px;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &s {
+        width: calc(41.4% - 10px);
+        border-radius: 12px;
+        overflow: hidden;
+        padding: 20px;
+        background: #f6f6f6;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 1200px) {
+            width: calc(50% - 10px);
+        }
+
+        @media screen and (max-width: 940px) {
+            width: 100%;
+        }
+
+        &_title {
+            margin-bottom: 20px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 135%;
+            letter-spacing: -0.03em;
+            color: var(--18181b);
+            text-align: start;
+        }
+
+        &__wrapper {
+            position: relative;
+            height: 100%;
+            max-height: calc(100% - 39px);
+
+            @media screen and (max-width: 940px) {
+                max-height: 239px;
+            }
+
+            &::before,
+            &::after {
+                pointer-events: none;
+                transition: all 0.1s;
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 45px;
+                opacity: 0;
+                left: 0;
+                z-index: 4;
+            }
+
+            &::after {
+                bottom: 0;
+                background: linear-gradient(0deg, #f6f6f6 0%, rgba(251, 251, 251, 0) 100%);
+            }
+
+            &::before {
+                top: 0;
+                background: linear-gradient(180deg, #f6f6f6 0%, rgba(251, 251, 251, 0) 100%);
+            }
+
+            &.bottom-fade::after {
+                opacity: 1;
+            }
+
+            &.top-fade::before {
+                opacity: 1;
+            }
+        }
+
+        &__inner {
+            max-height: 100%;
+            overflow-y: auto;
+
+            @media screen and (max-width: 940px) {
+                max-height: 239px;
+            }
+
+            &::-webkit-scrollbar {
+                width: 12px;
+            }
+        }
+    }
+
+
+    .post__info {
+        opacity: 0.5;
+    }
+
+
+}

@@ -9,6 +9,10 @@ module.exports = {
 		path: path.resolve(__dirname, "app"),
 	},
 
+	watchOptions: {
+		poll: true,
+	},
+
 	mode: "production",
 	module: {
 		rules: [

@@ -1,6 +1,16 @@
-// @import 'components/rubricator'
-.container {
-    .fd {
-        display: block;
-    }
+:root {
+    --fe2722: #fe2722;
+    --18181b: #18181b;
+    --bef550: #bef550;
+    --fbfbfb: #fbfbfb;
+    --ffffff: #fff;
+    --eef2f6: #eef2f6;
+    --547dff: #547dff;
 }
+
+:root {
+    --font-family: "Inter", sans-serif;
+}
+
+@import 'components/rubricator';
+@import 'components/hero';
