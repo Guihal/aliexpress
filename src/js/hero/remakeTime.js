@@ -3,7 +3,7 @@ export function remakeTime(time) {
 
 	let month = "месяц";
 	const monthNumber = Number(timeSplit[1]);
-	console.log(monthNumber);
+	// console.log(monthNumber);
 
 	switch (monthNumber) {
 		case 1:

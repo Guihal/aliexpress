@@ -4,13 +4,15 @@ import { remakeTime } from "./remakeTime";
 export async function getInfoPosts(block) {
 	return new Promise(async (resolve) => {
 		const info = [];
-
+		let postCounter = 1;
 		const posts = await getPostsOnLoading(block);
 
 		posts.forEach((post) => {
 			const postInfo = {};
 
 			if (post.dataset.postUid == null) return;
+
+			postInfo.id = postCounter;
 
 			const postDesription = post.querySelector(".js-feed-post-descr");
 			const postDate = post.querySelector(".js-feed-post-date");
@@ -46,7 +48,7 @@ export async function getInfoPosts(block) {
 
 					postInfo.description = postDesriptionTextSplit[0];
 
-					const postTechInfo = postDesriptionTextSplit[1].split("^");
+					const postTechInfo = postDesriptionTextSplit[1].replaceAll(/(\r\n|\n|\r|<br>)/gm, "").split("^");
 
 					postTechInfo.forEach((el) => {
 						if (el.includes("теги")) {
@@ -61,6 +63,8 @@ export async function getInfoPosts(block) {
 			}
 
 			info.push(postInfo);
+
+			postCounter++;
 		});
 
 		resolve(info);
