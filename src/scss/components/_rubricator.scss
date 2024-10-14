@@ -96,6 +96,10 @@
                 @media screen and (max-width: 960px) {
                     left: 20px;
                 }
+
+                @media screen and (max-width: 780px) {
+                    left: 0px;
+                }
             }
 
             &-right {
@@ -104,6 +108,10 @@
 
                 @media screen and (max-width: 960px) {
                     right: 20px;
+                }
+
+                @media screen and (max-width: 780px) {
+                    right: 0px;
                 }
             }
         }

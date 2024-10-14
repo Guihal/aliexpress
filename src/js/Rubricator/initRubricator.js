@@ -63,8 +63,8 @@ export async function initRubricator() {
 		const shiftLeft = rubricatorWr.getBoundingClientRect().left - rubricatorT.getBoundingClientRect().left;
 		const shiftRight = rubricatorWr.getBoundingClientRect().right - rubricatorT.getBoundingClientRect().right;
 
-		console.log("shiftRight " + shiftRight);
-		console.log("shiftLeft " + shiftLeft);
+		// console.log("shiftRight " + shiftRight);
+		// console.log("shiftLeft " + shiftLeft);
 
 		if (shiftLeft < 5 && shiftLeft > -5) {
 			blurLeft.style.opacity = 0;

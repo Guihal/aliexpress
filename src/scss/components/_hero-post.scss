@@ -1,0 +1,199 @@
+html body .t-rec {
+    .custom-container {
+        display: flex;
+        gap: 10px;
+        max-width: 760px !important;
+        margin-left: auto;
+        margin-right: auto;
+
+        .t-container,
+        .t-col {
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .t220,
+        .t1001 {
+            width: calc(50% - 5px);
+        }
+
+        .t220 {
+            &__textwrapper {
+                padding: 30px !important;
+                margin-left: 0 !important;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: border-box;
+            flex-direction: column;
+
+            .t220,
+            .t1001 {
+                width: 100% !important;
+            }
+        }
+    }
+
+    &.uc-descr-2 {
+        .custom-container {
+            display: flex;
+            gap: 20px;
+            max-width: 760px !important;
+            margin-left: auto;
+            margin-right: auto;
+
+            .t-container,
+            .t-col {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            .t1001 {
+                width: 100% !important;
+            }
+
+            .t1001__img-wrapper {
+                width: 210px !important;
+                min-width: 210px;
+                height: auto !important;
+            }
+
+            .unity {
+                width: 100%;
+            }
+
+            @media screen and (max-width: 768px) {
+                padding-left: 10px;
+                padding-right: 10px;
+                box-sizing: border-box;
+                flex-direction: column;
+
+                .t1001__img-wrapper,
+                .t1001 {
+                    min-width: none !important;
+                    width: 100% !important;
+                }
+
+                .t1001__img-wrapper {
+                    min-height: 200px;
+                }
+            }
+        }
+    }
+}
+
+.uc-descr,
+.uc-descr-1,
+.uc-descr-2 {
+    .t1001__img-wrapper {
+        height: auto !important;
+
+        .t1001__img {
+            background: none !important;
+            height: auto !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                display: block !important;
+            }
+        }
+    }
+
+}
+
+.uc-descr-2 {
+    .t1001__img-wrapper {
+        height: 100% !important;
+
+        .t1001__img {
+            background: none !important;
+            height: 100% !important;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                @media screen and (max-width: 768px) {
+                    height: auto !important;
+                }
+            }
+        }
+    }
+}
+
+.move-top {
+    .tn-atom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+    }
+}
+
+.uc-notification {
+    .t220__textwrapper {
+        background-image: url('https://static.tildacdn.com/tild3235-3236-4662-a236-323138326331/back.png') !important;
+        background-position: right top !important;
+        background-size: auto 100% !important;
+
+        @media screen and (max-width: 640px) {
+            background-image: none !important;
+        }
+    }
+}
+
+.uc-hidden {
+    display: none !important;
+}
+
+.uc-cards,
+.uc-cards-1,
+.uc-cards-2 {
+    @media screen and (min-width: 480px) and (max-width: 960px) {
+        .t-card__container {
+            display: flex !important;
+            gap: 10px !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            box-sizing: border-box;
+
+            .t-card__col {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+
+
+    }
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    html body .uc-quote .t-col {
+        margin: 0 !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    html body .uc-cards-3 .t-prefix_2 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}

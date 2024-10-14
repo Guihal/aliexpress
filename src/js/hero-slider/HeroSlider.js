@@ -54,7 +54,7 @@ export class HeroSlider {
 		this._eventPags();
 		this._addEventsPosts();
 		this._addSwipeEvents();
-		console.log(1);
+		// console.log(1);
 	}
 
 	_eventPags() {
@@ -72,7 +72,7 @@ export class HeroSlider {
 
 				setTimeout(() => {
 					this.pass = true;
-				}, 600);
+				}, 400);
 			});
 		});
 	}
@@ -110,7 +110,7 @@ export class HeroSlider {
 
 			setTimeout(() => {
 				this.pass = true;
-			}, 600);
+			}, 400);
 		}, 5000);
 	}
 
@@ -172,12 +172,12 @@ export class HeroSlider {
 
 	_hideBlock(block) {
 		block.classList.remove("active");
-		hide(block, 300);
+		hide(block, 200);
 	}
 
 	_showBlock(block) {
 		block.classList.add("active");
-		show(block, 300, "block");
+		show(block, 200, "block");
 	}
 
 	_addSwipeEvents() {
@@ -238,7 +238,7 @@ export class HeroSlider {
 
 			setTimeout(() => {
 				this.pass = true;
-			}, 600);
+			}, 400);
 
 			xStart = 0;
 			xEnd = 0;

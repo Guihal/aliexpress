@@ -1,5 +1,6 @@
 .hide-posts {
     .js-feed {
+        display: none !important;
         pointer-events: none;
         opacity: 0;
         position: absolute;
@@ -61,7 +62,7 @@
         // }
 
         &__slide {
-            transition: all 300ms;
+            transition: all 200ms;
             display: none;
             opacity: 0;
             cursor: pointer;
@@ -99,7 +100,7 @@
     }
 
     &__slide-img {
-        transition: all 300ms;
+        transition: all 200ms;
         display: none;
         cursor: pointer;
         opacity: 0;
@@ -113,7 +114,7 @@
         bottom: 0;
 
         &-item {
-            transition: all 300ms;
+            transition: all 200ms;
             background: #e4e4e5;
             border-radius: 40px;
             width: 40px;
@@ -471,6 +472,10 @@
 }
 
 .uc-red_potoki {
+    .js-feed-btn-show-more {
+        opacity: 0 !important;
+    }
+
     .t-feed__post {
         .post_tag {
             margin-bottom: 15px;
@@ -530,5 +535,13 @@
         line-height: 135%;
         letter-spacing: -0.03em;
         color: var(--fe2722);
+
+        a {
+            font-weight: 400 !important;
+            font-size: 14px !important;
+            line-height: 135% !important;
+            letter-spacing: -0.03em !important;
+            color: var(--fe2722) !important;
+        }
     }
 }

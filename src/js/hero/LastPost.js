@@ -5,7 +5,20 @@ export function LastPost(data) {
 
 	const postData = data[0];
 
-	const postImg = postData.hasOwnProperty("img") ? `<div class="hero__last-post_img-container"> <img class="hero__last-post_img" loading="lazy" alt="Крутое изображение поста" src="${postData.hasOwnProperty("homeImg") ? postData.homeImg : postData.img}" /></div>` : "";
+	let postImg = "";
+
+	const img = (imgsrc) => {
+		return `<div class="hero__last-post_img-container"> <img class="hero__last-post_img" loading="lazy" alt="Крутое изображение поста" src="${imgsrc}" /></div>`;
+	};
+
+	if (postData.hasOwnProperty("img")) {
+		postImg = img(postData.img);
+	}
+
+	if (postData.hasOwnProperty("homeImg")) {
+		postImg = img(postData.homeImg);
+	}
+
 	// const postTag = postData.hasOwnProperty("tag") ? `<div class="post_tag">${postData.tag}</div>` : "";
 	const postTitle = postData.hasOwnProperty("title") ? `<div class="hero__last-post_title">${postData.title}</div>` : "";
 	const postDate = postData.hasOwnProperty("date") ? `<div class="post_date">${postData.date}</div>` : "";

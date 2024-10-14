@@ -1,14 +1,15 @@
 import "../scss/main.scss";
 import { initRubricator } from "./Rubricator/initRubricator";
 import { heroInit } from "./hero/heroInit";
-import { removeDescription } from "./removeDescription";
-import { heroPost } from "./hero-post/heroPost";
-
+import { mainObserver } from "./mainObserver";
+import { moveToTop } from "./hero-post/moveToTop";
 function init() {
 	initRubricator();
+
+	mainObserver();
 	heroInit();
-	removeDescription();
-	heroPost();
+
+	moveToTop();
 }
 
 init();
